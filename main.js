@@ -26,6 +26,10 @@ equally.addEventListener('click', function () {
     newDiv.textContent = answer.value;
     newDiv.style.cursor = 'pointer'
     form.appendChild(newDiv);
+
+    newDiv.addEventListener('click', function () {
+      newDiv.remove();
+    })
   } else {
       errorDiv.classList.add('error_div');
       errorDiv.style.color = 'red';
