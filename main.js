@@ -1,24 +1,10 @@
 import { numberOne, numberTwo, action, equally, answer, form, errorDiv } from "./modules/const.js";
-
-function calculate(numOne, action, numTwo) {
-  if (action === 'plus') {
-    answer.value = Number(numOne) + Number(numTwo);
-  }
-  if (action === 'minus') {
-    answer.value = Number(numOne) - Number(numTwo);
-  }
-  if (action === 'multiplication') {
-    answer.value = Number(numOne) * Number(numTwo);
-  }
-  if (action === 'division') {
-    answer.value = Number(numOne) / Number(numTwo);
-  }
-}
+import { calculate } from "./modules/calc.js";
 
 equally.addEventListener('click', function () {
   const newDiv = document.createElement('div');
   if (numberOne.value.length > 0 && numberTwo.value.length > 0) {
-    calculate(numberOne.value, action.value, numberTwo.value)
+    calculate(numberOne.value, action.value, numberTwo.value);
 
     errorDiv.remove()
 
