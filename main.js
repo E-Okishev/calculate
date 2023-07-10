@@ -1,9 +1,4 @@
-const form = document.querySelector('form')
-const numberOne = document.getElementById('number_one');
-const numberTwo = document.getElementById('number_two');
-const action = document.getElementById('action');
-const equally = document.getElementById('equally');
-const answer = document.getElementById('answer');
+import { numberOne, numberTwo, action, equally, answer, form, errorDiv, newDiv } from "./modules/const.js";
 
 function calculate(numOne, action, numTwo) {
   if (action === 'plus') {
@@ -19,8 +14,6 @@ function calculate(numOne, action, numTwo) {
     answer.value = Number(numOne) / Number(numTwo);
   }
 }
-const errorDiv = document.createElement('div');
-const newDiv = document.createElement('div');
 
 equally.addEventListener('click', function () {
   if (numberOne.value.length > 0 && numberTwo.value.length > 0) {
@@ -31,7 +24,7 @@ equally.addEventListener('click', function () {
     newDiv.textContent = answer.value;
     newDiv.style.cursor = 'pointer'
     form.appendChild(newDiv);
-    
+
     newDiv.addEventListener('click', function () {
       newDiv.remove();
     })

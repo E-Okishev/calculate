@@ -16,3 +16,7 @@ section {
   align-items: center;
   justify-content: center;
 }
+
+select, option, button {
+  cursor: pointer;
+}
