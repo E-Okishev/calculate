@@ -1,0 +1,18 @@
+body {
+  margin: 0 auto;
+  background: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+section {
+  width: 80vh;
+  height: 80vh;
+  background: #ffffff;
+  border-radius: 103px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
