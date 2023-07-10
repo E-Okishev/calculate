@@ -1,3 +1,5 @@
+import { answer } from "./const.js";
+
 export function calculate(numOne, action, numTwo) {
   if (action === 'plus') {
     answer.value = Number(numOne) + Number(numTwo);
